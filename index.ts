@@ -4,7 +4,6 @@ import * as fs from "fs";
 
 async function run() {
   const dates = require(`./${process.argv[2]}`);
-
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
