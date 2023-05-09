@@ -1,8 +1,10 @@
 import puppeteer, { Page } from "puppeteer";
 import * as fs from "fs";
-import { dates } from "./dates";
+// import { dates } from "./dates";
 
 async function run() {
+  const dates = require(`./${process.argv[2]}`);
+
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
