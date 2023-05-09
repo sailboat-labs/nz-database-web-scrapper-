@@ -5,7 +5,10 @@ import { uid } from "uid";
 async function run() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  const company = { name: "128 KINGS DRIVE LIMITED", number: "8721371" };
+  const company = {
+    name: "ACCESS PROPERTY SERVICES LIMITED",
+    number: "2194510",
+  };
 
   const url = `https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/${company.number}`;
 
@@ -19,7 +22,11 @@ async function run() {
 
   // Labels
   const companyInfo = await page.evaluate(() => {
-    const company = { name: "128 KINGS DRIVE LIMITED", number: "8721371" };
+    const company = {
+      name: "ACCESS PROPERTY SERVICES LIMITED",
+      number: "2194510",
+    };
+
     const companyNumberLabel = document.querySelector(
       'label[for="companyNumber"]'
     );
@@ -96,7 +103,10 @@ async function run() {
   });
 
   const addresses = await page.evaluate(() => {
-    const company = { name: "128 KINGS DRIVE LIMITED", number: "8721371" };
+    const company = {
+      name: "ACCESS PROPERTY SERVICES LIMITED",
+      number: "2194510",
+    };
 
     const registeredOfficeAddressLabel = document.querySelector(
       'label[for="registeredCompanyAddress0"] + div'
@@ -120,7 +130,10 @@ async function run() {
   });
 
   const directors = await page.evaluate(() => {
-    const company = { name: "128 KINGS DRIVE LIMITED", number: "8721371" };
+    const company = {
+      name: "ACCESS PROPERTY SERVICES LIMITED",
+      number: "2194510",
+    };
 
     const details: any = [];
 
@@ -159,7 +172,10 @@ async function run() {
   });
 
   const shareholders = await page.evaluate(() => {
-    const company = { name: "128 KINGS DRIVE LIMITED", number: "8721371" };
+    const company = {
+      name: "ACCESS PROPERTY SERVICES LIMITED",
+      number: "2194510",
+    };
 
     const row = document.querySelector(".allocations div.row");
     const totalSharesLabel = row?.querySelector("label:nth-child(1)");
@@ -177,7 +193,7 @@ async function run() {
     };
   });
 
-  const allocations = await scrapeAllocators(page);
+  // const allocations = await scrapeAllocators(page);
 
   appendId(directors);
   appendId([shareholders]);
@@ -185,7 +201,7 @@ async function run() {
   console.log(addresses);
   console.log(directors);
   console.log(shareholders);
-  console.log(allocations);
+  // console.log(allocations);
 
   await browser.close();
 }
