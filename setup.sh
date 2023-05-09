@@ -13,6 +13,7 @@ npm install -g yarn
 
 # Install git
 sudo yum install git
+sudo yum install cronie -y
 
 # Install chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
