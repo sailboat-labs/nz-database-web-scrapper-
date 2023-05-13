@@ -3,7 +3,9 @@
 # Update package lists and install nvm
 sudo yum update -y
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-sudo reboot
+. ~/.nvm/nvm.sh
+nvm -v
+
 # Install latest version of node
 nvm install 18.16.0
 nvm use 18.16.0
@@ -27,4 +29,5 @@ cd nz-database-web-scrapper-/ || return
 # Install project dependencies
 yarn
 
+# Install forever for automation
 npm install forever -g
