@@ -31,3 +31,5 @@ yarn
 
 # Install forever for automation
 npm install forever -g
+
+sudo reboot

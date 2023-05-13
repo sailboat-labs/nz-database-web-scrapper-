@@ -1,6 +1,6 @@
-import puppeteer, { Page } from "puppeteer";
-import * as fs from "fs";
-import { uid } from "uid";
+const puppeteer = require("puppeteer");
+const fs = require("fs");
+// import { uid } from "uid";
 
 let companiesData = [];
 let addressesData = [];
