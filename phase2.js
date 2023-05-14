@@ -232,6 +232,8 @@ async function run() {
       company.number
     );
   }
+
+  console.log("======= Scrapping is done, CLOSING BROWSER =========");
   await browser.close();
 }
 

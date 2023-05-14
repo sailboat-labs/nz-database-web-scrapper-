@@ -33,3 +33,5 @@ yarn
 npm install forever -g
 
 sudo reboot
+
+mkdir project && cd project && git clone https://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@github.com/Kobby08/nz-database-web-scrapper-.git && cd nz-database-web-scrapper-/ && yarn && npm install forever -g
